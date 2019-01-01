@@ -474,6 +474,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			@include vendor('transform', 'rotate(-45deg)');
 			border-radius: 3px;
 			border: solid 2px _palette(border);
+			// color: _palette(fg-bold);
 			display: inline-block;
       font-size: 2.35em;
       font-weight: bold;
@@ -502,7 +503,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.style3 {
-			color: _palette(accent7, bg);
+			color: _palette(accent7, fg-bold);
 		}
 	}
 
@@ -559,6 +560,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		padding-left: 1.25em;
 
 		li {
+			color: black;
 			padding-left: 0.25em;
 		}
 	}
@@ -589,10 +591,12 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		&.icons {
 			cursor: default;
+
 			list-style: none;
 			padding-left: 0;
 
 			li {
+
 				display: inline-block;
 				padding: 0 1em 0 0;
 
@@ -898,6 +902,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		li {
 			@include padding(4em, 4em, (0,0,0,2em));
+			color: black;
 			display: block;
 			position: relative;
 			text-align: left;
@@ -913,7 +918,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			&:before {
 				display: block;
-				color: _palette(accent2, bg);
+				color: _palette(accent2, fg-light);
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
@@ -1047,7 +1052,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 
 			h2, h3, h4, h5, h6 {
-				color: _palette($p, fg);
+				color: _palette($p, indianred);
 			}
 
 			hr {
@@ -1066,7 +1071,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			header {
 				p {
-					color: _palette($p, fg-light);
+					color: _palette($p, bg);
 				}
 
 				&.major {
@@ -1075,7 +1080,7 @@ $baseurl: '{{ site.baseurl }}/images';
 					}
 
 					p {
-						color: _palette($p, fg);
+						color: _palette($p, fg-bold);
 						font-size: 1.3em;
 						text-align: justify;
 					}
@@ -1218,7 +1223,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			.features {
 				li {
 					@include breakpoint(small) {
-						border-top-color: _palette($p, border);
+						border-top-color: _palette($p, border2-bg);
 					}
 				}
 			}
@@ -1229,7 +1234,6 @@ $baseurl: '{{ site.baseurl }}/images';
 		@include padding(6em, 0);
 
 		> .inner {
-
 			width: 60em;
 			margin: 0 auto;
 
@@ -1256,10 +1260,12 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.style3 {
-			@include wrapper(accent5);
+			@include wrapper(accent7);
+			background-color: _palette(accent7, bg)
 		}
 
 		&.style4 {
+			@include wrapper(accent5);
 			background-color: transparent;
 		}
 
@@ -1645,7 +1651,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				width: 70%;
 
 				p {
-					color: inherit;
+					color: _palette(indianred);  // inherit;
 				}
 			}
 
