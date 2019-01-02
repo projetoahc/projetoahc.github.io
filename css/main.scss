@@ -236,7 +236,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		h4 + p,
 		h5 + p,
 		h6 + p {
-			font-size: 0.9em;
+			font-size: 1.9em;
 		}
 
 		&.major {
@@ -895,7 +895,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	.features {
 		@include vendor('display', 'flex');
 		@include vendor('flex-wrap', 'wrap');
-		@include vendor('justify-content', 'center');
+		@include vendor('justify-content', 'justify');
 		list-style: none;
 		padding: 0;
 		width: 100%;
@@ -1082,7 +1082,7 @@ $baseurl: '{{ site.baseurl }}/images';
 					p {
 						color: _palette($p, fg-bold);
 						font-size: 1.3em;
-						text-align: justify;
+						text-align: center;
 					}
 				}
 			}
